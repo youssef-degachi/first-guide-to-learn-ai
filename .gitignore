@@ -1,0 +1,13 @@
+node_modules/
+dist/
+exports/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+.DS_Store
+src/generated/content.json
+public/content/
+public/course-book.html

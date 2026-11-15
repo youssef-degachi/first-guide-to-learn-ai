@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "title": "AI from zero to practice",
+  "description": "A step-by-step course for understanding AI, doing useful work, and sharing what you learn.",
+  "researchSnapshot": "2026-11-14",
+  "edition": "2026-11-15",
+  "modules": [
+    {
+      "id": "foundations",
+      "number": "01",
+      "title": "Start with the essentials",
+      "shortTitle": "The foundations",
+      "description": "Get your bearings. Understand the tools, ask better questions, and learn how to check the answer.",
+      "outcome": "Give AI a clear task and judge the result.",
+      "icon": "compass",
+      "color": "sage"
+    },
+    {
+      "id": "research",
+      "number": "02",
+      "title": "Find answers you can trust",
+      "shortTitle": "Research & reasoning",
+      "description": "Work with sources, resolve conflicting information, and turn messy data into something useful.",
+      "outcome": "Build a sourced answer and identify what is still unknown.",
+      "icon": "search",
+      "color": "sand"
+    },
+    {
+      "id": "building",
+      "number": "03",
+      "title": "Build something useful",
+      "shortTitle": "Building with AI",
+      "description": "Go from a small specification to a working result. Learn code, reusable skills, and meaningful checks.",
+      "outcome": "Ship one small, verified application flow.",
+      "icon": "code",
+      "color": "blue"
+    },
+    {
+      "id": "systems",
+      "number": "04",
+      "title": "Make the work repeatable",
+      "shortTitle": "Agents & systems",
+      "description": "Understand harnesses, agents, handoffs, graphs, and automation without getting lost in the names.",
+      "outcome": "Choose and test a workflow with clear boundaries.",
+      "icon": "workflow",
+      "color": "rose"
+    },
+    {
+      "id": "creative",
+      "number": "05",
+      "title": "Create with intention",
+      "shortTitle": "Creative practice",
+      "description": "Direct images, video, and voice. Learn to preserve the details that matter when you make an edit.",
+      "outcome": "Create and evaluate a consistent multimedia lesson.",
+      "icon": "sparkles",
+      "color": "lavender"
+    },
+    {
+      "id": "teaching",
+      "number": "06",
+      "title": "Turn practice into knowledge",
+      "shortTitle": "Teach & share",
+      "description": "Use your experiments to explain clearly, teach a small group, and publish lessons with evidence.",
+      "outcome": "Teach a lesson another person can reproduce.",
+      "icon": "graduation",
+      "color": "yellow"
+    }
+  ]
+}

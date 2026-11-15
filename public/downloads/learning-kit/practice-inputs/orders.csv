@@ -1,0 +1,13 @@
+order_id,date,product,quantity,unit_price_usd,discount_usd,status,currency
+O01,2026-11-01,Workshop,2,50,0,paid,USD
+O02,2026-11-02,Consultation,1,120,20,paid,USD
+O03,2026-11-03,Template,3,30,0,refunded,USD
+O04,2026-11-04,Audit,2,75,10,paid,USD
+O05,2026-11-05,Course,1,200,0,pending,USD
+O06,2026-11-06,Template,4,25,0,paid,USD
+O07,2026-11-07,Consultation,1,120,0,paid,USD
+O08,2026-11-08,Workshop,2,50,0,cancelled,USD
+O09,2026-11-09,Template,3,40,20,paid,USD
+O10,2026-11-10,Course,1,80,0,paid,USD
+O11,2026-11-11,Audit,2,75,0,paid,USD
+O12,2026-11-12,Template,5,20,0,refunded,USD

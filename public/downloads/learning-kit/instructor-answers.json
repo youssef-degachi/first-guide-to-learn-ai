@@ -1,0 +1,93 @@
+{
+  "orders": {
+    "paid_order_count": 8,
+    "paid_quantity": 16,
+    "paid_gross_usd": 940,
+    "paid_discounts_usd": 50,
+    "paid_net_sales_usd": 890,
+    "paid_net_by_product_usd": {
+      "Audit": 290,
+      "Consultation": 220,
+      "Course": 80,
+      "Template": 200,
+      "Workshop": 100
+    },
+    "status_counts": {
+      "paid": 8,
+      "refunded": 2,
+      "pending": 1,
+      "cancelled": 1
+    }
+  },
+  "support_labels": [
+    {
+      "ticket_id": "T01",
+      "category": "billing"
+    },
+    {
+      "ticket_id": "T02",
+      "category": "access"
+    },
+    {
+      "ticket_id": "T03",
+      "category": "technical"
+    },
+    {
+      "ticket_id": "T04",
+      "category": "sales"
+    },
+    {
+      "ticket_id": "T05",
+      "category": "billing"
+    },
+    {
+      "ticket_id": "T06",
+      "category": "technical"
+    },
+    {
+      "ticket_id": "T07",
+      "category": "access"
+    },
+    {
+      "ticket_id": "T08",
+      "category": "sales"
+    },
+    {
+      "ticket_id": "T09",
+      "category": "billing"
+    },
+    {
+      "ticket_id": "T10",
+      "category": "technical"
+    }
+  ],
+  "support_category_counts": {
+    "billing": 3,
+    "access": 2,
+    "technical": 3,
+    "sales": 2
+  },
+  "documents": {
+    "launch_date": "2026-11-27",
+    "price_usd": 59,
+    "owner": "Lina",
+    "authority": "D02",
+    "old_draft": "D01",
+    "refund_period": "Not established by the supplied sources; no promised period may be invented."
+  },
+  "contacts": {
+    "expected_names": [
+      "Ada",
+      "Bo",
+      "Cora",
+      "Dee"
+    ],
+    "buggy_names": [
+      "Ada",
+      "Ada Duplicate",
+      "Bo",
+      "Dee"
+    ],
+    "lesson": "Counts are equal but identities differ. Test the expected records, not only the count."
+  }
+}

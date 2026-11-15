@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import matter from 'gray-matter';
+import { slugify } from '../src/lib/content-utils.mjs';
+
+const args=process.argv.slice(2);
+const option=(name,fallback='')=>{const index=args.indexOf(`--${name}`);return index>=0?args[index+1]:fallback;};
+const title=option('title');
+const moduleId=option('module','foundations');
+const minutes=Number(option('minutes','15'));
+const course=JSON.parse(fs.readFileSync('content/course.json','utf8'));
+if(!title || !slugify(title)) throw new Error('Provide a title: npm run lesson:new -- --title "Your lesson" --module research');
+if(!course.modules.some(m=>m.id===moduleId)) throw new Error(`Unknown chapter: ${moduleId}`);
+if(!Number.isInteger(minutes)||minutes<1) throw new Error('Minutes must be a positive integer.');
+const directory='content/lessons';
+const orders=fs.readdirSync(directory).filter(f=>f.endsWith('.md')).map(filename=>matter(fs.readFileSync(path.join(directory,filename),'utf8')).data.order).filter(Number.isInteger);
+const order=Math.max(0,...orders)+1;
+const id=`${String(order).padStart(2,'0')}-${slugify(title)}`;
+const destination=path.join(directory,`${id}.md`);
+const dateParts=new Intl.DateTimeFormat('en-CA',{timeZone:'Africa/Tunis',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+const dateValue=type=>dateParts.find(part=>part.type===type).value;
+const today=`${dateValue('year')}-${dateValue('month')}-${dateValue('day')}`;
+const data={id,title,summary:'Describe one useful outcome for the learner.',module:moduleId,order,minutes,level:'Beginner',updated:today,status:'draft',objectives:['State an observable learning outcome.','State how the learner will check the result.']};
+const body=`## The idea\n\nExplain the concept in plain language for public readers, without referring to an authoring conversation or private request. Include one example and direct sources for product facts.\n\n## Try it\n\nName the inputs, access requirements, steps, and task. This is a proposed exercise until it has been run.\n\n## Check your work\n\nProvide the expected result or rubric. Identify an essential failure and a relevant limitation.\n\n## Teach it\n\nSuggest one demonstration or teach-back question.\n\n## Keep exploring\n\nAdd related lessons and primary sources. Record your evidence in content/sources/${id}.md.\n`;
+fs.writeFileSync(destination,'---\n'+Object.entries(data).map(([key,value])=>`${key}: ${JSON.stringify(value)}`).join('\n')+'\n---\n\n'+body,{flag:'wx'});
+console.log(`Created draft: ${destination}\nComplete the research and exercise, then set status to published and rebuild.`);

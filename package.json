@@ -1,0 +1,38 @@
+{
+  "name": "youssef-ai-academy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "node scripts/build-content.mjs && vite --host 127.0.0.1",
+    "content:build": "node scripts/build-content.mjs",
+    "content:check": "node scripts/build-content.mjs --check",
+    "build": "node scripts/build-content.mjs && tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "lesson:new": "node scripts/new-lesson.mjs",
+    "book:html": "node scripts/build-book.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.0",
+    "@fontsource-variable/newsreader": "^5.2.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "gray-matter": "^4.0.3",
+    "marked": "^16.4.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2"
+  }
+}
